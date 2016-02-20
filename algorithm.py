@@ -1,8 +1,9 @@
 import GameLogic
-from .robot import *
+from RoboSim.robot.proximitysensor import ProximitySensor
 
 def setup():
     print('Algorithm setup')
+    px = ProximitySensor(1)
 
 def loop():
     print('Algorithm loop')

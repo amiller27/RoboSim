@@ -1,5 +1,5 @@
 import bge
-from . import algorithm
+import algorithm
 
 setup_finished = False
 def simulate():
