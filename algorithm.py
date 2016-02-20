@@ -9,4 +9,4 @@ def loop():
     print('Algorithm loop')
     cont = GameLogic.getCurrentController()
     obj = cont.owner
-    obj.applyTorque((0, 0, 0.5), False)
+    obj.applyTorque((0, 0, 10), False)
