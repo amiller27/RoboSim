@@ -17,6 +17,7 @@ class SimBody:
 
         try:
             model_name = desc['simbody']['model']
+            top_level_name = desc['simbody']['top_level_model']
         except KeyError as e:
             print(e)
 
@@ -29,7 +30,10 @@ class SimBody:
         print("Libloaded: " + status.libraryName)
 
         scene = logic.getCurrentScene()
-        model = scene.addObject(model_name[:-6], "Plane")
-
-    def read(self):
-        pass
+        model = scene.addObject(top_level_name, "Plane")
+        model.worldPosition = [5, 5, 2]
+        model.enableRigidBody()
+        model.restoreDynamics()
+        if model.isSuspendDynamics():
+            print("Model is isSuspendDynamics")
+        print("Physics ID: " + str(model.getPhysicsId()))
