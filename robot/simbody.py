@@ -25,3 +25,4 @@ class SimBody:
 
         scene = logic.getCurrentScene()
         self.model = scene.addObject(top_level_name, "LoadPoint")
+

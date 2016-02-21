@@ -1,12 +1,15 @@
-import GameLogic
+import bge
 from RoboSim.robot.proximitysensor import ProximitySensor
 
+px1 = None
+px2 = None
 def setup():
     print('Algorithm setup')
-    px = ProximitySensor(1)
+    global px
+    px1 = ProximitySensor(1)
+    px2 = ProximitySensor(2)
 
 def loop():
     print('Algorithm loop')
-    cont = GameLogic.getCurrentController()
-    obj = cont.owner
-    obj.applyTorque((0, 0, 10), False)
+    #print(px.read())
+
