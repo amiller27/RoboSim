@@ -1,11 +1,13 @@
 import bge
 from RoboSim.robot.proximitysensor import ProximitySensor
 
-px = None
+px1 = None
+px2 = None
 def setup():
     print('Algorithm setup')
     global px
-    px = ProximitySensor(1)
+    px1 = ProximitySensor(1)
+    px2 = ProximitySensor(2)
 
 def loop():
     print('Algorithm loop')

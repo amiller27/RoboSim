@@ -30,8 +30,8 @@ class SimBody:
         print("Libloaded: " + status.libraryName)
 
         scene = logic.getCurrentScene()
-        model = scene.addObject(top_level_name, "Empty")
+        model = scene.addObject(top_level_name, top_level_name)
         model.worldPosition = [0, 0, 0.0555]
-        #model.enableRigidBody()
-        #model.restoreDynamics()
+        model.enableRigidBody()
+        model.restoreDynamics()
         #print("Physics ID: " + str(model.getPhysicsId()))

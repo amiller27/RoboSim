@@ -34,7 +34,7 @@ class ProximitySensor:
         if blend_path not in bge.logic.LibList():
             bge.logic.LibLoad(blend_path, 'Scene', async = False)
 
-        new_sensor = scene.addObject('ProximitySensor', 'Plane', 0)
+        new_sensor = scene.addObject('ProximitySensor', simbody, 0)
         new_sensor.setParent(simbody)
         new_sensor.localPosition = self.desc['location']
         new_sensor.localOrientation = mathutils.Euler(self.desc['rotation'], 'XYZ')
