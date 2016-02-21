@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    -->
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>RoboSim</title>
 
-    <link rel="icon" type="image/svg" href="website/fonts/blender.svg">
+    <link rel="icon" href="icon.png">
 
     <!-- Bootstrap Core CSS -->
-    <link href="website/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="website/css/scrolling-nav.css" rel="stylesheet">
+    <link href="sass/grayscale.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,35 +35,32 @@
 
 </head>
 
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-
-<body linkifytime="3" linkified="0" linkifying="false" id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">RoboSim</a>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa"></i>  <span class="light">ROBOSIM</span>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
+                        <a href="#page-top"></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#download">download</a>
                     </li>
                 </ul>
             </div>
@@ -64,13 +69,14 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>RoboSim</h1>
-                    <br/>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                            <h1><p class="intro-text">Introducing RoboSim</p></h1>
+                                            <br/>
                     <h3><ul>
                                     <li><i><strong>Extensible</strong></i> automation simulation package</li>
                                     <br/>
@@ -81,50 +87,43 @@
                                     <li><i><strong>Transfer</strong></i> your program immediately to hardware</li>
                             </ul></h3>
                             <br />
-
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          </div>
-        <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-          </div>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    </div>
-                    </div>
-                    </div>
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>About RoboSim</h1>
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About ROBOSIM</h2>
+
+ <br />
+                    <p> The University of Pittsburgh's Robotics and Automation Society often creates hardware controlled through python, but had no simple solution to simulate their prototypes before making them.</p>
                     <br />
-                    <h3><p> The University of Pittsburgh's Robotics and Automation Society often creates hardware controlled through python, but had no simple solution to simulate their prototypes before making them.</p></h4>
-                    <br />
-                    <h3><p> RoboSim makes prototyping on Raspberry Pi, or Intel Edison easy by combining a blender powered robotics simulation with an Arduino-like control loop, made possible through the infinitely flexible python language.</p></h4>
-                </div>
+                    <p> RoboSim makes prototyping on Raspberry Pi, or Intel Edison easy by combining a blender powered robotics simulation with an Arduino-like control loop, made possible through the infinitely flexible python language.</p>
+
+
             </div>
         </div>
     </section>
+    <br />
+    <br />
+    <br />
+    <br />
 
-    <!-- Services Section -->
-    <section id="download" class="services-section">
-        <div class="container-flex">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Download RoboSim</h1>
-                    <br />
+
+    <!-- Experience Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download RoboSim</h2>
+                                      <br />
                     <br />
                     <a href="https://github.com/amiller27/RoboSim/archive/master.zip" class="btn btn-primary btn-lg active" role="button">Download</a>
                     <br />
@@ -132,28 +131,44 @@
                     <p>Be sure to check out our project on <a href="https://github.com/amiller27/RoboSim" target="_blank">GitHub</a>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-            <h4>2016 University of Pittsburgh Robotics and Automation Society</h4>
-            
-            </footer>
+        <div class="container text-center">
+            <p>University of Pittsburgh Robotics and Automation Society 2016</p>
+            <br />
+            <p>Acknowledgments:&nbsp;
+            <a href="https://github.com/twbs/bootstrap">Twitter Bootstrap</a>,&nbsp;
+            <a href="https://startbootstrap.com/template-overviews/grayscale">Grayscale</a>
+            </p>
+        </div>
+    </footer>
 
     <!-- jQuery -->
-    <script src="website/js/jquery_002.js"></script>
+    <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="website/js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-    <!-- Scrolling Nav JavaScript -->
-    <script src="website/js/jquery.js"></script>
-    <script src="website/js/grayscale.js"></script>
-    <script src="website/js/scrolling-nav.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
 
 
-
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
 
 </body>
-</html>
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+ga('create', 'UA-74038783-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+</html>
