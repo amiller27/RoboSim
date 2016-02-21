@@ -22,7 +22,7 @@ class SimBody:
             print(e)
 
         print("Simbody Initalizing")
-        if len(logic.LibList()) < 1:
+        if (abs_path + model_name) not in logic.LibList():
             global status
             status = logic.LibLoad(abs_path + model_name, "Scene", verbose = True,  async=False)
         else:
@@ -30,10 +30,8 @@ class SimBody:
         print("Libloaded: " + status.libraryName)
 
         scene = logic.getCurrentScene()
-        model = scene.addObject(top_level_name, "Plane")
-        model.worldPosition = [5, 5, 2]
-        model.enableRigidBody()
-        model.restoreDynamics()
-        if model.isSuspendDynamics():
-            print("Model is isSuspendDynamics")
-        print("Physics ID: " + str(model.getPhysicsId()))
+        model = scene.addObject(top_level_name, "Empty")
+        model.worldPosition = [0, 0, 0.0555]
+        #model.enableRigidBody()
+        #model.restoreDynamics()
+        #print("Physics ID: " + str(model.getPhysicsId()))

@@ -4,11 +4,12 @@
             "type": "ProximitySensor",
             "name": "Sensor1",
             "pin": 1,
-            "location": [0, 0, 0],
-            "rotation": [0, 0]
+            "location": [0.05, 0.06, 0.09],
+            "rotation": [0, 0, 0]
         }
     ],
     "simbody": {
-    	"model": "coneman.blend"
+    	"model": "simbody.blend",
+        "top_level_model": "simbody"
     }
 }
