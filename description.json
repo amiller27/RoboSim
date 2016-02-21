@@ -4,14 +4,14 @@
             "type": "ProximitySensor",
             "name": "Sensor1",
             "pin": 1,
-            "location": [0.05, 0.06, 0.03],
+            "location": [0.20, 0.20, 0.18],
             "rotation": [0, 0, 0]
         },
         {
             "type": "ProximitySensor",
             "name": "Sensor2",
             "pin": 2,
-            "location": [-0.05, 0.06, 0.03],
+            "location": [-0.20, 0.20, 0.18],
             "rotation": [0, 0, 0]
         }
     ],

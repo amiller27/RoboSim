@@ -2,6 +2,7 @@ import bge
 from bge import logic
 import bpy
 import json
+import mathutils
 
 status = None
 
@@ -24,5 +25,10 @@ class SimBody:
         status = logic.LibLoad(abs_path + model_name, "Scene")
 
         scene = logic.getCurrentScene()
-        self.model = scene.addObject(top_level_name, "LoadPoint")
+        self.model = scene.addObject(top_level_name, top_level_name)
 
+        camera = scene.objects['Camera']
+        camera.setParent(self.model)
+        camera.localPosition = [0, -2, 1]
+        camera.localOrientation = mathutils.Euler([1.2, 0, 0], 'XYZ')
+        camera.near = 1
