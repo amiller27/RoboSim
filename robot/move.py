@@ -17,11 +17,11 @@ class Move:
 
         Move.instances.append(self)
 
-    def forward(self, speed):
-        self.simbody.setLinearVelocity([0, speed, 0], True)
+    def forward(self):
+        self.simbody.setLinearVelocity([0, 0.4, 0], True)
 
-    def backward(self, speed):
-        self.simbody.setLinearVelocity([0, -speed, 0], True)
+    def backward(self):
+        self.simbody.setLinearVelocity([0, -0.4, 0], True)
 
     def left(self):
         self.simbody.setAngularVelocity([0, 0, 2], True)

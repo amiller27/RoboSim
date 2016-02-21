@@ -24,12 +24,12 @@ def loop():
     #print(px_right.read(), px_left.read())
     if px_right.read():
         if px_left.read():
-            queue.extend(lambda : move.backward(1) for i in range(10))
+            queue.extend(lambda : move.backward() for i in range(10))
             queue.extend(lambda : move.right() for i in range(10))
         else:
             move.left()
     elif px_left.read():
         move.right()
     else:
-        move.forward(0.4)
+        move.forward()
 
