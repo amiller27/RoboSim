@@ -3,6 +3,7 @@ from bge import logic
 import bpy
 import json
 import mathutils
+import os.path
 
 status = None
 
@@ -11,6 +12,7 @@ class SimBody:
     def __init__(self):
         print("Simbody Initalizing")
         abs_path = bpy.path.abspath("//")
+        module_path = os.path.dirname(os.path.abspath(__file__))
 
         with open(abs_path + 'description.json') as desc_file:
             desc = json.loads(desc_file.read())
@@ -22,7 +24,7 @@ class SimBody:
             print(e)
 
         global status
-        status = logic.LibLoad(abs_path + model_name, "Scene")
+        status = logic.LibLoad(module_path + '/models/' + model_name, "Scene")
 
         scene = logic.getCurrentScene()
         self.model = scene.addObject(top_level_name, 'Empty')
