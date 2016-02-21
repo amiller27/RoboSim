@@ -25,7 +25,7 @@ class SimBody:
         status = logic.LibLoad(abs_path + model_name, "Scene")
 
         scene = logic.getCurrentScene()
-        self.model = scene.addObject(top_level_name, top_level_name)
+        self.model = scene.addObject(top_level_name, 'Empty')
 
         camera = scene.objects['Camera']
         camera.setParent(self.model)

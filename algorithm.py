@@ -1,7 +1,6 @@
 import bge
 from RoboSim.robot.proximitysensor import ProximitySensor
 from RoboSim.robot.steppermove import StepperMove
-import atexit
 
 px_right = None
 px_left = None
@@ -13,8 +12,6 @@ def setup():
     px_right = ProximitySensor(1)
     px_left = ProximitySensor(2)
     move = StepperMove()
-    atexit.register(cleanup)
-
 
 i = 0
 queue = []
@@ -35,7 +32,3 @@ def loop():
         move.right()
     else:
         move.forward()
-
-def cleanup():
-	print("GoodBye")
-	move.stop()

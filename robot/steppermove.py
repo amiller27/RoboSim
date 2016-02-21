@@ -15,7 +15,7 @@ class StepperMove:
 
         self.simbody.setDamping(0.6, 0.6)
 
-        Move.instances.append(self)
+        StepperMove.instances.append(self)
 
     def forward(self):
         self.simbody.setLinearVelocity([0, 0.4, 0], True)
